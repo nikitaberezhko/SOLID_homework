@@ -36,7 +36,7 @@ public class Game : IStartingGame, INumericGame
         }
     }
 
-    public void ValidateNumber(NumberValidator validator, int quanityAttemps)
+    public void ValidateNumber(INumberValidator validator, int quanityAttemps)
     {
         var i = 0;
         while (i < _numberOfAttemps)
@@ -71,7 +71,7 @@ public interface INumberValidator
 /// (-1) — недолет,
 /// 0 — совпадение
 /// </summary>
-public class NumberValidator
+public class NumberValidator : INumberValidator
 {
     private int _secretNumber;
 

@@ -25,5 +25,5 @@ public interface IStopableGame
 
 public interface INumericGame
 {
-    public void ValidateNumber(NumberValidator validator, int quanityAttemps);
+    public void ValidateNumber(INumberValidator validator, int quanityAttemps);
 }
